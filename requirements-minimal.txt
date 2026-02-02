@@ -8,4 +8,3 @@ openai==1.58.1
 python-telegram-bot==21.9
 requests~=2.32.3
 tenacity==8.3.0
-Pillow~=11.0.0
