@@ -37,7 +37,7 @@ def main():
         'proxy': os.environ.get('PROXY', None) or os.environ.get('OPENAI_PROXY', None),
         'max_history_size': int(os.environ.get('MAX_HISTORY_SIZE', 15)),
         'max_conversation_age_minutes': int(os.environ.get('MAX_CONVERSATION_AGE_MINUTES', 180)),
-        'assistant_prompt': os.environ.get('ASSISTANT_PROMPT', 'You are a helpful assistant.'),
+        'assistant_prompt': os.environ.get('ASSISTANT_PROMPT', 'Ты — персональный Telegram-ассистент пользователя. Твоя задача — помогать с: - объяснением технических тем простым языком - поиском решений и анализом ошибок - краткими и практичными советами Правила поведения: - Отвечай кратко, структурированно и по делу - Если вопрос технический — давай пошаговое решение - Если ты не уверен — честно скажи об этом - Не выдумывай факты и команды - Не используй лишние предупреждения и дисклеймеры Контекст диалога ограничен. Используй только последние сообщения пользователя. Если пользователь задаёт неконкретный вопрос — уточни детали. Если просит пример — приведи минимальный рабочий пример. язык ответа — язык пользователя.'),
         'max_tokens': int(os.environ.get('MAX_TOKENS', max_tokens_default)),
         'n_choices': int(os.environ.get('N_CHOICES', 1)),
         'temperature': float(os.environ.get('TEMPERATURE', 1.0)),
@@ -46,7 +46,7 @@ def main():
         'functions_max_consecutive_calls': int(os.environ.get('FUNCTIONS_MAX_CONSECUTIVE_CALLS', 10)),
         'presence_penalty': float(os.environ.get('PRESENCE_PENALTY', 0.0)),
         'frequency_penalty': float(os.environ.get('FREQUENCY_PENALTY', 0.0)),
-        'bot_language': os.environ.get('BOT_LANGUAGE', 'en'),
+        'bot_language': os.environ.get('BOT_LANGUAGE', 'ru'),
         'show_plugins_used': os.environ.get('SHOW_PLUGINS_USED', 'false').lower() == 'true',
         'whisper_prompt': os.environ.get('WHISPER_PROMPT', ''),
     }
@@ -79,7 +79,7 @@ def main():
         'group_trigger_keyword': os.environ.get('GROUP_TRIGGER_KEYWORD', ''),
         'token_price': float(os.environ.get('TOKEN_PRICE', 0.002)),
         'transcription_price': float(os.environ.get('TRANSCRIPTION_PRICE', 0.006)),
-        'bot_language': os.environ.get('BOT_LANGUAGE', 'en'),
+        'bot_language': os.environ.get('BOT_LANGUAGE', 'ru'),
     }
 
     plugin_config = {
